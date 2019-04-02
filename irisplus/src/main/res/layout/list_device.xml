@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/device_name"
+        android:paddingBottom="5dp"
+        style="@style/listViewMainText">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/device_name"
+        android:paddingRight="25dp"
+        android:layout_marginLeft="6dp"
+        android:layout_below="@+id/device_name">
+
+        <TextView
+            android:id="@+id/device_type"
+            style="@style/listViewSmallText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/device_state"
+            android:layout_below="@+id/device_type"
+            style="@style/listViewSmallText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/device_status"
+            android:layout_below="@+id/device_state"
+            style="@style/listViewSmallText">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/device_state"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/device_temperature_img"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_temperature"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="5dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/device_temperature"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/device_temperature_img"
+                style="@style/listViewSmallText">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/device_battery_img"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/device_temperature_img"
+                android:background="@drawable/ic_battery_full"
+                android:layout_width="30dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="5dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/device_battery"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/device_battery_img"
+                style="@style/listViewSmallText">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/device_signal_img"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/device_battery_img"
+                android:background="@drawable/ic_signal_high"
+                android:layout_width="21dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="5dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/device_signal"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/device_signal_img"
+                style="@style/listViewSmallText"
+                android:layout_width="30dp">
+            </TextView>
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout> 

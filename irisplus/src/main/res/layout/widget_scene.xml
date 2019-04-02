@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <Button
+        android:id="@+id/widget_scene_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/ic_scene"/>
+
+    <TextView
+        android:layout_below="@+id/widget_scene_button"
+        android:id="@+id/appwidget_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_margin="0dp"
+        android:paddingTop="0dp"/>
+
+</RelativeLayout>

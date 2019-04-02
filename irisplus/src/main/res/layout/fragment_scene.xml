@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragmentStyle"
+    tools:context="com.eightydegreeswest.irisplus.IrisActivity" >
+    
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/scene_swipe_container"
+        style="@style/swipeLayoutStyle">
+    
+	    <ListView
+	        android:id="@+id/scene_fragment_view"
+            style="@style/listViewStyle">
+		</ListView>
+		
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    style="@style/fragmentStyle"
+    tools:context="com.eightydegreeswest.irisplus.IrisActivity">
+    
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/control_swipe_container"
+        style="@style/swipeLayoutStyle"
+        tools:ignore="MergeRootFrame" >
+
+	    <ListView
+	        android:id="@+id/control_fragment_view"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="true"
+            style="@style/listViewStyle" >
+		</ListView>
+		
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontoptimize
+-dontshrink
+-dontpreverify
+-verbose
+-dontwarn org.apache.**
+-dontwarn android.support.**
+-dontwarn com.dropbox.**
+-dontwarn com.google.**
+-dontwarn org.bouncycastle.**
+
+-keep class !com.eightydegreeswest.irisplus.** { *; }

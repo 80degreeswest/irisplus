@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin" android:background="#fff">
+
+    <Button
+        android:id="@+id/widget_btn_home"
+        android:layout_height="fill_parent"
+        android:layout_width="0.0dip"
+        android:layout_weight="1.0"
+        android:layout_margin="1dp"
+        android:background="@color/irisplusnavy"
+        android:text="HOME"/>
+
+    <Button
+        android:id="@+id/widget_btn_away"
+        android:layout_width="0.0dip"
+        android:layout_weight="1.0"
+        android:layout_height="fill_parent"
+        android:layout_margin="1dp"
+        android:background="@color/irisplusnavy"
+        android:text="AWAY"/>
+
+    <Button
+        android:id="@+id/widget_btn_night"
+        android:layout_width="0.0dip"
+        android:layout_weight="1.0"
+        android:layout_height="fill_parent"
+        android:layout_margin="1dp"
+        android:background="@color/irisplusnavy"
+        android:text="NIGHT"/>
+
+    <Button
+        android:id="@+id/widget_btn_vacation"
+        android:layout_width="0.0dip"
+        android:layout_weight="1.0"
+        android:layout_height="fill_parent"
+        android:layout_margin="1dp"
+        android:background="@color/irisplusnavy"
+        android:text="VAC"/>
+
+</LinearLayout>

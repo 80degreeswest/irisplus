@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.iris"
+        android:title="Iris">
+
+        <com.eightydegreeswest.irisplus.custom.DetailedEditTextPreference
+            android:dialogMessage="Enter Your Iris account username:"
+            android:dialogTitle="Iris Username"
+            android:key="com.eightydegreeswest.irisplus.username"
+            android:title="Iris Username" />
+
+        <EditTextPreference
+            android:dialogMessage="Enter Your Iris account password:"
+            android:dialogTitle="Iris Password"
+            android:inputType="textPassword"
+            android:key="com.eightydegreeswest.irisplus.password"
+            android:title="Iris Password" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.premiumlock"
+            android:title="I Have Iris+ Premium" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.automation"
+        android:title="Automation">
+
+        <!--
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.serviceforeground"
+            android:title="Run Iris+ in Foreground" />
+        -->
+
+        <CheckBoxPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.ifttt"
+            android:title="Custom Rules (IFTTT/Tasker)" />
+
+        <com.eightydegreeswest.irisplus.custom.DetailedListPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="60"
+            android:entries="@array/homeStatusInterval"
+            android:entryValues="@array/homeStatusIntervalValues"
+            android:key="com.eightydegreeswest.irisplus.homestatus"
+            android:title="Home Status Check Interval" />
+
+        <CheckBoxPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.homestatus.signal"
+            android:title="Check For No Signal" />
+
+        <com.eightydegreeswest.irisplus.custom.DetailedListPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="4"
+            android:entries="@array/homeStatusSnooze"
+            android:entryValues="@array/homeStatusSnoozeValues"
+            android:key="com.eightydegreeswest.irisplus.homestatus.snooze"
+            android:title="Home Status Alert Snooze" />
+
+        <com.eightydegreeswest.irisplus.custom.DetailedEditTextPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:dialogMessage="Enter Your IFTTT Maker Key:"
+            android:dialogTitle="IFTTT Maker Key"
+            android:key="com.eightydegreeswest.irisplus.automation.iftttkey"
+            android:title="IFTTT Maker Key" />
+
+        <CheckBoxPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.automation.ifttt.all"
+            android:title="Send ALL events to IFTTT as JSON String" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.notifications"
+        android:title="Notifications">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.notify.events"
+            android:title="Event Notifications" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.notify.appevents"
+            android:title="App Notifications" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.notify.bar"
+            android:title="Notification Bar" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.notify.toast"
+            android:title="Screen Text" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.notify.dialog"
+            android:title="Popup Dialog" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.touchfeedback"
+            android:title="Touch Feedback On Buttons" />
+
+        <RingtonePreference
+            android:key="com.eightydegreeswest.irisplus.ringtone"
+            android:title="Notification Sound"
+            android:ringtoneType="notification"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.security"
+        android:title="Security">
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:dialogMessage="Enter a pin to secure the application:"
+            android:dialogTitle="Lock Pin"
+            android:inputType="numberPassword"
+            android:key="com.eightydegreeswest.irisplus.pin"
+            android:maxLength="4"
+            android:title="Lock Pin" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.pin.securityonly"
+            android:title="Lock ONLY Security screen" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.other"
+        android:title="Other">
+
+        <com.eightydegreeswest.irisplus.custom.DetailedListPreference
+            android:dependency="com.eightydegreeswest.irisplus.premiumlock"
+            android:defaultValue="15"
+            android:entries="@array/awayDelay"
+            android:entryValues="@array/awayDelayValues"
+            android:key="com.eightydegreeswest.irisplus.widgets.updateinterval"
+            android:title="Widget Update Interval" />
+
+        <EditTextPreference
+            android:defaultValue="300"
+            android:dialogMessage="Enter filter run hours before notification:"
+            android:dialogTitle="Filter Run Hours"
+            android:inputType="number"
+            android:key="com.eightydegreeswest.irisplus.filterhours"
+            android:maxLength="4"
+            android:title="Filter Run Hours" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.localfilterruntime"
+            android:title="Use Device Filter Runtime" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.hidedimmercontrols"
+            android:title="Hide Dimmer Controls" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="com.eightydegreeswest.irisplus.multithreading"
+            android:title="Use Multi Threading" />
+
+        <com.eightydegreeswest.irisplus.custom.DetailedListPreference
+            android:defaultValue="35"
+            android:entries="@array/tempRange"
+            android:entryValues="@array/tempRange"
+            android:key="com.eightydegreeswest.irisplus.mintemp"
+            android:title="Min Thermostat Limit" />
+
+        <com.eightydegreeswest.irisplus.custom.DetailedListPreference
+            android:defaultValue="95"
+            android:entries="@array/tempRange"
+            android:entryValues="@array/tempRange"
+            android:key="com.eightydegreeswest.irisplus.maxtemp"
+            android:title="Max Thermostat Limit" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="com.eightydegreeswest.irisplus.category.development"
+        android:title="Development">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="com.eightydegreeswest.irisplus.debug"
+            android:title="Debug Mode" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

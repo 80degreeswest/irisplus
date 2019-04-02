@@ -1,0 +1,98 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.eightydegreeswest.irisplus.LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_gravity="top|center"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingBottom="10dp"
+                android:text="Sign in to Iris"/>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="93dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text=""
+                android:background="@drawable/ic_login_button"/>
+
+            <TextView
+                android:id="@+id/version_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:padding="10dp"
+                android:text=""/>
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

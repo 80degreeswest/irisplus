@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Bottom View Start-->
+    <RelativeLayout
+        android:id="@+id/control_detail_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/listView">
+
+        <!-- Dimmer View -->
+        <LinearLayout
+            android:id="@+id/control_dimmer_buttons"
+            style="@style/listView"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/control_dimmer_10"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="10"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_20"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="20"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_30"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="30"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_40"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="40"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_50"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="50"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_60"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="60"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_70"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="70"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_80"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="80"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_90"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="90"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_dimmer_100"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="100"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+        </LinearLayout>
+        <!-- End Dimmer View -->
+
+        <!-- Fan View -->
+        <LinearLayout
+            android:id="@+id/control_fan_buttons"
+            style="@style/listView"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+        <Button
+            android:id="@+id/control_fan_low"
+            android:layout_height="match_parent"
+            android:layout_width="0.0dip"
+            android:text="Low"
+            android:layout_margin="1dp"
+            android:layout_weight="1.0"
+            android:background="@color/irisplusnavy"/>
+
+        <Button
+            android:id="@+id/control_fan_med"
+            android:layout_height="match_parent"
+            android:layout_width="0.0dip"
+            android:text="Med"
+            android:layout_margin="1dp"
+            android:layout_weight="1.0"
+            android:background="@color/irisplusnavy"/>
+
+        <Button
+            android:id="@+id/control_fan_high"
+            android:layout_height="match_parent"
+            android:layout_width="0.0dip"
+            android:text="High"
+            android:layout_margin="1dp"
+            android:layout_weight="1.0"
+            android:background="@color/irisplusnavy"/>
+
+        </LinearLayout>
+        <!-- End Fan View -->
+
+        <!-- Shade View -->
+        <LinearLayout
+            android:id="@+id/control_shade_buttons"
+            style="@style/listView"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/control_shade_down"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="Down"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_shade_fav"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="Fav"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/control_shade_up"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="Up"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+        </LinearLayout>
+        <!-- End Shade View -->
+
+    </RelativeLayout>
+    <!-- Bottom View End-->
+
+    <!-- Top View Start-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/control_main_container"
+        style="@style/listView">
+
+        <TextView
+            android:id="@+id/control_name"
+            style="@style/listViewMainText"
+            android:layout_centerVertical="true">
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/control_status_button"
+            style="@style/controlToggleButton"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+    <!-- Top View End-->
+
+</com.daimajia.swipe.SwipeLayout>

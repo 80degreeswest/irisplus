@@ -1,0 +1,49 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.eightydegreeswest.irisplus.PinActivity" >
+
+    <ScrollView
+        android:id="@+id/pin_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical"
+            android:layout_gravity="top|center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_activity_pin"/>
+
+            <EditText
+                android:id="@+id/pin"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:textSize="20dp"
+                android:imeOptions="actionUnspecified"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="To reset your PIN, click on the Login menu above and login using your Iris credentials."/>
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

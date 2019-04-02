@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="180dp" android:minHeight="180dp" android:updatePeriodMillis="0"
+    android:previewImage="@drawable/ic_widget_thermostat_preview"
+    android:initialLayout="@layout/widget_thermostat"
+    android:configure="com.eightydegreeswest.irisplus.widgets.ThermostatWidgetConfigureActivity"
+    android:widgetCategory="home_screen|keyguard|searchbox"
+    android:resizeMode="horizontal|vertical"
+    android:initialKeyguardLayout="@layout/widget_thermostat"></appwidget-provider>

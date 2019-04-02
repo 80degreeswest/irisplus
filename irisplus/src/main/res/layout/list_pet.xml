@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <ImageView
+        android:id="@+id/pet_icon"
+        style="@style/listViewIcon">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/pet_name"
+        android:layout_toRightOf="@+id/pet_icon"
+        style="@style/listViewMainText">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/pet_status"
+        style="@style/spinnerButton"
+        android:background="@color/irisplusnavy"/>
+
+</RelativeLayout> 

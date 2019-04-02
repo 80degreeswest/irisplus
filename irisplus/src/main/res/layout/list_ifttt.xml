@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/ifttt_name"
+        style="@style/listViewMainText"/>
+    
+    <ToggleButton
+        android:id="@+id/ifttt_status_button"
+        style="@style/listViewToggleButton"
+        android:background="@drawable/ifttt_btn_selector"
+        android:layout_marginRight="10dp"
+        android:enabled="true"/>
+
+</RelativeLayout> 

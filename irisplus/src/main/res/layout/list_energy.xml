@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/energy_device_name"
+        style="@style/listViewMainText" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/energy_device_usage"
+        style="@style/listViewMainText"
+        android:paddingRight="10px"
+        android:paddingLeft="10px"
+        android:layout_marginLeft="10px"
+        android:layout_alignParentRight="true">
+    </TextView>
+
+</RelativeLayout> 

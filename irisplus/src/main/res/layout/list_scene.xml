@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/scene_name"
+        style="@style/listViewMainText" >
+    </TextView>
+    
+    <ToggleButton
+        android:id="@+id/scene_run_button"
+        style="@style/listViewToggleButton"
+        android:background="@drawable/ic_video_play"
+        android:layout_marginRight="10dp"
+        android:layout_width="20dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout> 

@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    style="@style/fragmentStyle"
+    tools:context="com.eightydegreeswest.irisplus.fragments.HelpFragment">
+
+    <ScrollView
+        android:id="@+id/help_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/help_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="0dp"
+            >
+
+            <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/helpWebView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

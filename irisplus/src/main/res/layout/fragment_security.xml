@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragmentStyle"
+    tools:context="com.eightydegreeswest.irisplus.IrisActivity" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/security_swipe_container"
+        style="@style/swipeLayoutStyle">
+
+        <RelativeLayout
+            android:id="@+id/security_alarm_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/alarm_status"
+                android:text=""
+                android:layout_marginBottom="30dp"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_alarm"/>
+
+            <LinearLayout
+                android:id="@+id/security_alarm_row_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="4.0dip"
+                android:paddingTop="5.0dip"
+                android:paddingRight="4.0dip"
+                android:paddingBottom="1.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/alarm_status">
+
+                <Button
+                    android:id="@+id/btn_alarm_away"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_alarm_on"/>
+
+                <Button
+                    android:id="@+id/btn_alarm_night"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_alarm_partial"/>
+
+                <Button
+                    android:id="@+id/btn_alarm_panic"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_alarm_panic"/>
+
+                <Button
+                    android:id="@+id/btn_alarm_home"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:text=""
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ic_alarm_off"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

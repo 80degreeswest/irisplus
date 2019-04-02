@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/dashboard_heading"
+        style="@style/dashboardHeader">
+    </TextView>
+
+    <TextView
+        android:id="@+id/dashboard_status"
+        android:layout_below="@+id/dashboard_heading"
+        style="@style/dashboardContent">
+    </TextView>
+
+</RelativeLayout> 

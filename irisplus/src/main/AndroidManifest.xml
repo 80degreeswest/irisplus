@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eightydegreeswest.irisplus" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name="com.eightydegreeswest.irisplus.common.IrisPlus"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:backupAgent="com.eightydegreeswest.irisplus.common.IrisPlusBackupAgent"
+        android:restoreAnyVersion="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="false">
+        <activity
+            android:name=".IrisActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".common.Preferences" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".PinActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="@string/title_activity_pin"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+
+        <receiver
+            android:name=".common.AutomationBroadcast"
+            android:enabled="true" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".common.WidgetUpdateBroadcast"
+            android:enabled="true" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".automation.homestatus.HomeStatusCheckBroadcast"
+            android:enabled="true" />
+
+        <service android:name=".common.AutomationService"
+            android:enabled="true"
+            android:label="Iris+ Automation"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter android:priority="1">
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".widgets.ControlWidget"
+            android:label="Iris+ Control" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/control_widget_info" />
+        </receiver>
+
+        <activity android:name=".widgets.ControlWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widgets.LockWidget"
+            android:label="Iris+ Locks" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lock_widget_info" />
+        </receiver>
+
+        <activity android:name=".widgets.LockWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widgets.ThermostatWidget"
+            android:label="Iris+ Thermostat" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/thermostat_widget_info" />
+        </receiver>
+
+        <activity android:name=".widgets.ThermostatWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widgets.SceneWidget"
+            android:label="Iris+ Scenes" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/scene_widget_info" />
+        </receiver>
+
+        <activity android:name=".widgets.SceneWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widgets.AlarmWidget"
+            android:label="Iris+ Alarm Modes" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/alarm_widget_info" />
+        </receiver>
+
+        <activity android:name=".widgets.AlarmWidgetConfigureActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".wear.WearService"
+            android:label="Iris+ Wear Service" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/mobile" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".widgets.VoiceControlWidget"
+            android:label="Iris+ Voice Control" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/voice_control_widget_info" />
+        </receiver>
+        
+        <activity
+            android:name=".VoiceRecognitionActivity"
+            android:label="Iris+ Voice Control" >
+        </activity>
+    </application>
+
+</manifest>

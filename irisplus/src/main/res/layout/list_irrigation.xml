@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/irrigation_swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Bottom View Start-->
+    <RelativeLayout
+        android:id="@+id/irrigation_detail_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/listView">
+        
+        <LinearLayout
+            android:id="@+id/irrigation_action_buttons"
+            style="@style/listView"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/irrigation_state_manual"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="Man"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_state_schedule"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="Sched"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_delay_0"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="0h"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_delay_12"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="12h"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_delay_24"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="24h"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_delay_48"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="48h"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+            <Button
+                android:id="@+id/irrigation_delay_72"
+                android:layout_height="match_parent"
+                android:layout_width="0.0dip"
+                android:text="72h"
+                android:layout_margin="1dp"
+                android:layout_weight="1.0"
+                android:background="@color/irisplusnavy"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!-- Bottom View End-->
+
+    <!-- Top View Start-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/irrigation_main_container"
+        style="@style/listView">
+
+        <TextView
+            android:id="@+id/irrigation_name"
+            style="@style/listViewMainText"
+            android:layout_centerVertical="true">
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/irrigation_status_button"
+            style="@style/controlToggleButton"
+            android:background="@drawable/irrigation_btn_selector"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+    <!-- Top View End-->
+
+</com.daimajia.swipe.SwipeLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/listView">
+
+    <TextView
+        android:id="@+id/irrigation_name"
+        android:paddingRight="125dp"
+        style="@style/listViewMainText"/>
+
+    <TextView
+        android:id="@+id/irrigation_state"
+        android:layout_below="@+id/irrigation_name"
+        android:paddingTop="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="120dp"
+        style="@style/listViewSubText"/>
+
+    <Spinner
+        android:id="@+id/irrigation_mode"
+        style="@style/spinnerButton"
+        android:background="@color/irisplusnavy"/>
+
+    <Spinner
+        android:id="@+id/irrigation_delay"
+        android:layout_below="@+id/irrigation_mode"
+        style="@style/spinnerButton"
+        android:background="@color/irisplusnavy"/>
+
+    <Button
+        android:id="@+id/irrigation_start_stop"
+        android:layout_below="@+id/irrigation_delay"
+        style="@style/spinnerButton"
+        android:text="WATER NOW"
+        android:background="@color/irisplusnavy"/>
+
+</RelativeLayout> 
+-->

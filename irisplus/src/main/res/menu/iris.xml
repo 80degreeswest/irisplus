@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.eightydegreeswest.irisplus.IrisActivity" >
+
+    <item
+        android:id="@+id/action_voice"
+        android:orderInCategory="50"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_microphone"
+        android:title="@string/title_voice"/>
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_help_icon"
+        android:title="@string/title_help"/>
+
+    <item
+        android:id="@+id/action_switch_hub"
+        android:orderInCategory="150"
+        android:showAsAction="never"
+        android:title="@string/action_switch_hub"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:title="@string/title_login"/>
+
+    <item
+        android:id="@+id/action_buy"
+        android:showAsAction="never"
+        android:title="@string/action_buy"
+        android:orderInCategory="500"/>
+
+</menu>
